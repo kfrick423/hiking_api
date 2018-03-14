@@ -20,9 +20,8 @@ function enterLocation(){
 	{
 		event.preventDefault();
 		let query = $('.js-query').val();
-		let address = encodeURIComponent(query);
 		$('.js-query').val('');
-		getLongLat(address);
+		getLongLat(query);
 
 	})
 
