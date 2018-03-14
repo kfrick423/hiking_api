@@ -3,3 +3,8 @@ body{
   font-family: 'Mina', sans-serif;
   
 }
+ ul {
+  
+  display: inline-block;
+
+ }
