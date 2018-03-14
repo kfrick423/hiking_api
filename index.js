@@ -73,7 +73,6 @@ function renderWeatherData(data){
 			<li>Low Temp: ${data.forecast.simpleforecast.forecastday[4].low.fahrenheit} &#8457 </li>
 		</ul>	
   </div>`;
-
 }
 
 function getHikeData(lat, lng){
@@ -104,25 +103,18 @@ function getClimbData(lat, lng){
 
 
 function enterLocation(){
-		let address = "San+Francisco,+CA";
-		getLongLat(address);
-	// $('.location-form').submit(event =>
-	// {
-	// 	event.preventDefault();
-	// 	let query = $('.js-query').val();
-	// 	let address = encodeURIComponent(query);
-	// 	$('.js-query').val('');
-
-	// })
-
+	$('.location-form').submit(event => {
+		event.preventDefault();
+		let query = $('.js-query').val();
+		$('.js-query').val('');
+		getLongLat(query);
+  })
 }
 
 
 function activatePlacesSearch(){
-
 	let input = document.getElementById('autocomplete')
 	let autocomplete = new google.maps.places.Autocomplete(input);
-
 }
 
 $(enterLocation)
