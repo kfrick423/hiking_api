@@ -1,10 +1,8 @@
-body{
-
+body {
   font-family: 'Mina', sans-serif;
-  
 }
- ul {
-  
-  display: inline-block;
 
- }
+ul {
+  list-style-type: none;
+  display: inline-block;
+}
